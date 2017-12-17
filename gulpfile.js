@@ -39,7 +39,7 @@ gulp.task('copyhtml', function() {
 // Optimize images
 
 gulp.task('imagemin', () =>
-    gulp.src('src/images/*')
+    gulp.src('src/images/*}')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))   
 );
@@ -78,7 +78,7 @@ gulp.task('default', ['message', 'copyhtml', 'htmlminify', 'imagemin', 'sass', '
 
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/js/*.js', ['scripts']);
-	gulp.watch('src/images/*', ['imagein']);
+	gulp.watch('src/images/*', ['imagemin']);
 	gulp.watch('src/sass/**/*.scss', ['sass']);
 	gulp.watch('src/*.html', ['copyhtml']);
 });
