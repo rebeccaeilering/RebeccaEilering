@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
+const imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
@@ -38,10 +38,10 @@ gulp.task('copyhtml', function() {
 
 // Optimize images
 
-gulp.task('imagemin', () =>
-    gulp.src('src/images/*}')
+gulp.task('imageMin', () =>
+    gulp.src('src/images/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/images'))   
+        .pipe(gulp.dest('dist/images'))   
 );
 
 // Compress JavaScript
@@ -72,13 +72,13 @@ gulp.task('scripts', function() {
 
 // Run ALL tasks
 
-gulp.task('default', ['message', 'copyhtml', 'htmlminify', 'imagemin', 'sass', 'scripts', 'browser-sync']);
+gulp.task('default', ['message', 'copyhtml', 'htmlminify', 'imageMin', 'sass', 'scripts', 'browser-sync']);
 
 // Watch Gulp tasks
 
 gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/js/*.js', ['scripts']);
-	gulp.watch('src/images/*', ['imagemin']);
+	gulp.watch('src/images/*', ['imageMin']);
 	gulp.watch('src/sass/**/*.scss', ['sass']);
 	gulp.watch('src/*.html', ['copyhtml']);
 });
