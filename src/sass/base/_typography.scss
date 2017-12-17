@@ -14,6 +14,7 @@ a {
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(90deg,#e5c500 5%,#e59e03 10%,#cf631b 30%,rgba(207,99,27,0) )100%;
     border-image-slice: 1;
+    color: white;
 
     @include screen('tablet-small') { 
         @include font-size(40px);        

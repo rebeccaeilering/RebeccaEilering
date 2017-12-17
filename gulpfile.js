@@ -41,7 +41,7 @@ gulp.task('copyhtml', function() {
 gulp.task('imagemin', () =>
     gulp.src('src/images/*')
     .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))   
+    .pipe(gulp.dest('dist/images'))   
 );
 
 // Compress JavaScript

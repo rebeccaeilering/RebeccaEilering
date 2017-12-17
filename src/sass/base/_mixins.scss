@@ -22,14 +22,13 @@ $breakpoints: (
         }
     }
 }
-    
+   
+// Font Size
+// usage: @include font-size(16px);
 @function calculateRem($size) {
     $remSize: $size / 16px;
     @return $remSize * 1rem;
 }
-  
-// Font Size
-// usage: @include font-size(16px);
 
 @mixin font-size($size) {
     font-size: $size;
