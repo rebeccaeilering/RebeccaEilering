@@ -1,0 +1,11 @@
+.social {
+  background: rgba(0,0,0,0.5);
+  max-width: 100%;
+}
+
+.social-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 2rem;
+}
