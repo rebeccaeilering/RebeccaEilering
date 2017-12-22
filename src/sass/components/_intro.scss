@@ -5,16 +5,26 @@
   max-width: 100vw;
   height: 80vh;
   background-size: cover;
-  margin-top: -62px;
+  margin-top: -85px;
   background-repeat: no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  @include screen('tablet-wide') { 
+    margin-top: -62px;
 
-  .intro-inner {
-    color: white;
+}
+
+  .intro-container {
     background: rgba(0,0,0,0.5);
-    padding: 1rem;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    
+    .intro-headline {
+      color: white;
+      max-width: 1000px;
+      margin: auto;
+    }
+
   }
 }
