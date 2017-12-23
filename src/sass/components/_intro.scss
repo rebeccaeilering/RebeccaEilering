@@ -10,10 +10,19 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  position: relative;
   @include screen('tablet-wide') { 
     margin-top: -62px;
-
-}
+  }
+  ::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(top,rgba(0,0,0,0.5),transparent);
+    content: '';
+  }
 
   .intro-container {
     background: rgba(0,0,0,0.5);
