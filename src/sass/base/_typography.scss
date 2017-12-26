@@ -3,20 +3,3 @@
 a {
     text-decoration: none;
 }
-
-.logo {
-    @include font-size(30px);
-    font-weight: 800;
-    font-style: italic;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg,#e5c500 5%,#e59e03 10%,#cf631b 30%,rgba(207,99,27,0) )100%;
-    border-image-slice: 1;
-    color: white;
-
-    @include screen('tablet-small') { 
-        @include font-size(40px);        
-    }
-}
