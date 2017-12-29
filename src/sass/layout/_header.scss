@@ -15,14 +15,18 @@ header {
         li {
             list-style: none;
             display: inline;
-            padding: 0 1rem;
-
-            &:last-child {
-                padding-right: 0;
-            }
+            padding: 0 .5rem;
 
             a {
                 color: white;
+                padding: 1rem;
+
+                &:hover,
+                &:focus {
+                    background: rgba(234, 197, 31,0.25);
+                    color: white;
+                    border-bottom: 4px solid $sunflower;
+                }
             }
         }
     }

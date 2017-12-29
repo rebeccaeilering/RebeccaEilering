@@ -37,6 +37,7 @@
     h1 {
       @include font-size(60px);  
       font-style: italic;
+      text-shadow: 2px 2px 0 rgb(32, 111, 175);
     }
   }
 }
