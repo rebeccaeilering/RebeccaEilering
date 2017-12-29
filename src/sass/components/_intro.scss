@@ -1,42 +1,42 @@
 .intro {
-  background-image: url('/images/intro-bg-1.jpg');
+  background: url('/images/intro-bg-1.jpg') no-repeat;
+  background-size: cover;
   width: 100%;
   margin: 0;
   max-width: 100vw;
-  height: 80vh;
-  background-size: cover;
+  height: 50vh;
   margin-top: -85px;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: relative;
   border-bottom: 10px solid transparent;
   border-image: linear-gradient(90deg,#EAC51F 5%,#82BF0A 30%, #206FAF 100%);
   border-image-slice: 1;
+
   @include screen('tablet-wide') { 
     margin-top: -62px;
   }
-  ::before {
+
+  .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to bottom,rgba(32, 111, 175,0.25)10%,rgba(32, 111, 175,0.25) 90%);
+    background-image: linear-gradient(to bottom,rgba(32, 111, 175,0.7)10%,rgba(32, 111, 175,0.25) 90%);
     content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  // .intro-container {
-  //   // background: rgba(32, 111, 175,0.25);
-  //   width: 100%;
-  //   max-width: 100%;
+  .intro-container {
+    h1,
+    h2 {
+      color: white;
+      font-weight: 400;
+    }
 
-  //   .intro-headline {
-  //     color: white;
-  //     max-width: 1000px;
-  //     margin: auto;
-  //   }
-
-  // }
+    h1 {
+      @include font-size(60px);  
+      font-style: italic;
+    }
+  }
 }
