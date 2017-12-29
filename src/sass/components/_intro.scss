@@ -25,19 +25,18 @@
     right: 0;
     background-image: linear-gradient(to bottom,rgba(32, 111, 175,0.25)10%,rgba(32, 111, 175,0.25) 90%);
     content: '';
-    filter: multiply;
   }
 
-  .intro-container {
-    // background: rgba(32, 111, 175,0.25);
-    width: 100%;
-    max-width: 100%;
+  // .intro-container {
+  //   // background: rgba(32, 111, 175,0.25);
+  //   width: 100%;
+  //   max-width: 100%;
 
-    .intro-headline {
-      color: white;
-      max-width: 1000px;
-      margin: auto;
-    }
+  //   .intro-headline {
+  //     color: white;
+  //     max-width: 1000px;
+  //     margin: auto;
+  //   }
 
-  }
+  // }
 }
