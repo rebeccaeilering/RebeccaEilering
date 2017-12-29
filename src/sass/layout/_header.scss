@@ -18,13 +18,13 @@ header {
             padding: 0 .5rem;
 
             a {
-                color: white;
+                color: $white;
                 padding: 1rem;
 
                 &:hover,
                 &:focus {
                     background: rgba(234, 197, 31,0.25);
-                    color: white;
+                    color: $white;
                     border-bottom: 4px solid $sunflower;
                 }
             }

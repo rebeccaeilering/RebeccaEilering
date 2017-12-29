@@ -30,14 +30,14 @@
   .intro-container {
     h1,
     h2 {
-      color: white;
+      color: $white;
       font-weight: 400;
     }
 
     h1 {
       @include font-size(60px);  
       font-style: italic;
-      text-shadow: 2px 2px 0 rgb(32, 111, 175);
+      text-shadow: 2px 2px 4px rgb(17, 17, 17);
     }
   }
 }
