@@ -1,4 +1,29 @@
 .contact{
   background: rgba(255,255,255,0.5);
   max-width: 100%;
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+
+    .c-box {
+      background: $white;
+
+      h2 {
+        @include font-size(60px);  
+        color: $matisse;
+      }
+    }
+
+    .c-box:nth-child(1) {
+      background: transparent;
+      grid-column: 1;
+    }
+
+    .c-box:nth-child(2) {
+      grid-column: 2 / span 3;
+    }
+  }
 }
