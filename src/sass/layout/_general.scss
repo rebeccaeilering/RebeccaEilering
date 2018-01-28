@@ -29,12 +29,13 @@ section {
 }
 
 .container {
-    max-width: 1000px;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
     @include screen('tablet-wide') { 
         padding: 4rem 0;
+        width: 100%;
+        max-width: 1000px;
     }
 
 
