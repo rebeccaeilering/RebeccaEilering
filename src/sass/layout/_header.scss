@@ -10,7 +10,12 @@ header {
     }
 
     nav {
+        display: none;
         padding: 1rem 0;
+
+        @include screen('tablet-wide') { 
+            display: block;
+        }
 
         li {
             list-style: none;

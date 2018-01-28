@@ -10,14 +10,14 @@
   width: 100%;
   margin: 0;
   max-width: 100vw;
-  height: 50vh;
-  margin-top: -85px;
+  height: 30vh;
   border-bottom: 10px solid transparent;
   border-image: linear-gradient(90deg,#EAC51F 5%,#82BF0A 30%, #206FAF 100%);
   border-image-slice: 1;
 
-  @include screen('tablet-wide') { 
+  @include screen('tablet') { 
     margin-top: -62px;
+    height: 50vh;
   }
 
   .intro-container {
@@ -28,9 +28,20 @@
     }
 
     h1 {
-      @include font-size(82px);  
+      @include font-size(40px);  
       font-style: italic;
       text-shadow: 2px 2px 4px rgb(17, 17, 17);
+
+      @include screen('tablet') { 
+        @include font-size(82px);  
+      }
+    }
+
+    h2 {
+      @include font-size(20px);  
+      @include screen('tablet') { 
+        @include font-size(32px);  
+      }
     }
   }
 }
