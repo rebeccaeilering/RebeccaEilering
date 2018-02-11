@@ -9,17 +9,18 @@
   }
 
   .box {
-    display: flex;
-    justify-content: space-between;
-    background: $white;
+    // display: flex;
+    // justify-content: space-between;
+    // background: $white;
+    color: #fff;
 
-    span {
-      padding: 1rem 0 0 1rem;
-      line-height: 1;
-      color: $matisse;
-      @include font-size(32px);
-      font-weight: 800;
-    }
+    // span {
+    //   padding: 1rem 0 0 1rem;
+    //   line-height: 1;
+    //   color: $matisse;
+    //   @include font-size(32px);
+    //   font-weight: 800;
+    // }
     
     a {
       padding: 1rem;
