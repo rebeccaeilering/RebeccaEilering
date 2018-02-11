@@ -1,0 +1,16 @@
+#mobile-nav {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  background-color: $pistachio;
+  width: 75px;
+  z-index: 1000;
+  text-align: center;
+  color: $white;
+  padding: 10px 0;
+  @include font-size(20px);  
+
+  @include screen('tablet') { 
+    display: none;
+  }
+}
