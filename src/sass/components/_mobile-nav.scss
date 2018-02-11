@@ -8,7 +8,8 @@
   text-align: center;
   color: $white;
   padding: 10px 0;
-  @include font-size(20px);  
+  @include font-size(20px); 
+  border: 0; 
 
   @include screen('tablet') { 
     display: none;
