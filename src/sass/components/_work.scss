@@ -1,7 +1,9 @@
 .work-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
   @include screen('tablet') { 
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 800px;
@@ -29,11 +31,16 @@
   }
   // What I do
   .box:nth-child(1) {
-    grid-column: 3;
-    grid-row: 1 / span 1;
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     align-items: center;
     background: transparent;
+
+    @include screen('tablet') { 
+      grid-column: 3;
+      grid-row: 1 / span 1;
+    }
 
     h2 {
       @include font-size(60px);  
@@ -43,23 +50,29 @@
   
   // Web dev
   .box:nth-child(2) {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
+    grid-column: 1;
+    grid-row: 2;
     border-bottom: 10px solid $matisse;
     background-image: url('/images/img-webdev.jpg');
     background-size: cover;
 
+    @include screen('tablet') { 
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
   }
   // Design
   .box:nth-child(3) {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
     border-bottom: 10px solid $pistachio;
     background-image: url('/images/img-desgin.jpeg');
     background-size: cover;
+
     @include screen('tablet') { 
-      grid-column: 1;
-      grid-row: 2;
+      grid-column: 2;
+      grid-row: 3;
     }
 
     .title {
@@ -68,11 +81,16 @@
   }
 
   .box:nth-child(4) {
-    grid-column: 3;
-    grid-row: 2 / span 2;
+    grid-column: 1;
+    grid-row: 4;
     border-bottom: 10px solid $sunflower;
     background-image: url('/images/img-art.jpeg');
     background-size: cover;
+
+    @include screen('tablet') { 
+      grid-column: 3;
+      grid-row: 2 / span 2;
+    }
 
     .title {
       background: $sunflower;
@@ -80,11 +98,16 @@
   }
 
   .box:nth-child(5) {
-    grid-column: 1 / span 3;
-    grid-row: 4 / span 2;
+    grid-column: 1;
+    grid-row: 5;
     border-bottom: 10px solid transparent;
     border-image: linear-gradient(90deg,$matisse 5%,$pistachio 30%, $sunflower 100%);
     border-image-slice: 1;
+
+    @include screen('tablet') { 
+      grid-column: 1 / span 3;
+      grid-row: 4 / span 2;
+    }
 
     .title {
       background-image: linear-gradient(90deg,$matisse 5%, $pistachio 100%);
