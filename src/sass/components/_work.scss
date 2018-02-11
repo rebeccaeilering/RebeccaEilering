@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
 
   @include screen('tablet') { 
     grid-template-columns: 1fr 1fr 1fr;
