@@ -22,10 +22,10 @@
     
         nav {
             display: none;
-            padding: 1rem 0;
+            padding: 4rem 0;
 
             @include screen('tablet') { 
-            padding: 0;            
+                padding: 0;            
             }
 
             #mobile-close {
