@@ -7,9 +7,10 @@
   z-index: 1000;
   text-align: center;
   color: $white;
-  padding: 10px 0;
-  @include font-size(20px); 
+  padding: 15px 0;
+  @include font-size(25px); 
   border: 0; 
+  cursor: pointer;
 
   @include screen('tablet') { 
     display: none;
