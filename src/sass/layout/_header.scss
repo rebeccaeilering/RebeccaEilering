@@ -41,6 +41,7 @@
                 background: $pistachio;
                 color: $white;
                 display: block;
+                overflow: auto;
 
                 #mobile-close {
                     position: fixed;
@@ -92,7 +93,6 @@
                         @include screen('tablet') { 
                             padding: 15px 20px;
                             border-bottom: 4px solid $sunflower;
-
                         }
                     }
                 }
