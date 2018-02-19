@@ -1,13 +1,11 @@
 .subpage {
 
   .intro {
-    height: 20vh;
+    height: 25vh;
 
     @include screen('tablet') { 
-      margin-top: -62px;
       height: 40vh;
     }
-
   }
 
   .content {

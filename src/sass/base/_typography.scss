@@ -9,3 +9,19 @@ a {
     }
 }
 
+ul,
+h4,
+p {
+    margin-bottom: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.endnote {
+    @include font-size(12px);  
+}
+
+
+
