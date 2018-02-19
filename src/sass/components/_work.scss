@@ -15,6 +15,7 @@
   a.box {
     background: $white;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    position: relative;
 
     &:hover {
       box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
@@ -25,8 +26,11 @@
       color: $white;
       padding: 10px 20px;
       display: inline-block;
+      position: relative;
+      z-index: 100;
     }
   }
+
   // What I do
   .box:nth-child(1) {
     grid-column: 1;

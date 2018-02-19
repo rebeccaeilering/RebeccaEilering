@@ -1,5 +1,19 @@
-.content {
-  h3 {
-    margin-bottom: 1rem;
+.subpage {
+
+  .intro {
+    height: 20vh;
+
+    @include screen('tablet') { 
+      margin-top: -62px;
+      height: 40vh;
+    }
+
   }
+
+  .content {
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+
 }

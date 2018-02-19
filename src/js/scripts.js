@@ -10,4 +10,7 @@ $(document).ready(function(){
       $('nav').removeClass('open');
   });
 
+  $('#web-dev').hover(function() {
+
+  });
 });

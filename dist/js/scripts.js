@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#mobile-nav").click(function(){$("nav").addClass("open")}),$("#mobile-close").click(function(){$("nav").removeClass("open")})});
+$(document).ready(function(){$("#mobile-nav").click(function(){$("nav").addClass("open")}),$("#mobile-close").click(function(){$("nav").removeClass("open")}),$("#web-dev").hover(function(){})});
