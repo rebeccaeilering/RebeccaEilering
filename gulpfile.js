@@ -9,6 +9,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var autoprefixerOptions = {
 	browsers: ['last 2 versions', '> 5%', 'Firefox ESR'] };
+var deploy = require('gulp-deploy-git');
 
 
 // Logs message
@@ -81,4 +82,12 @@ gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/images/*', ['imageMin']);
 	gulp.watch('src/sass/**/*.scss', ['sass']);
 	gulp.watch('src/*.html', ['copyhtml']);
+});
+
+// Deploy project
+gulp.task('deploy', function() {
+  return gulp.src('dist/**/*')
+    .pipe(deploy({
+      repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches:   ['prod']
+    }));
 });
