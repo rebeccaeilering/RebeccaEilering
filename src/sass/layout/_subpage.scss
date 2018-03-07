@@ -14,4 +14,49 @@
     }
   }
 
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skill-category {
+      flex-grow: 1;
+
+      &.last {
+        width: 100%;
+      }
+
+      h4 {
+      }
+
+      li {
+        display: inline-block;
+        padding: 10px;
+        border: 1px dotted $pistachio;
+        margin: 0 10px 20px 0;
+      }
+    }
+  }
+
+  .job {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted $sunflower;
+
+    
+    .time-place {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .job-position {
+      font-style: italic;
+      font-weight: 300;
+      @include font-size(14px);  
+    }
+
+    .job-time {
+      @include font-size(14px);  
+    }
+  }
+
 }
