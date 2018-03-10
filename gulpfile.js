@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
+const htmlPartial = require('gulp-html-partial');
 var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
@@ -29,10 +30,13 @@ gulp.task('browser-sync',  ['sass'], function() {
     gulp.watch("src/*.html").on('change', reload);
 });
 
-// Copy and minify all html files
+// Complile Partials, Copy and minify all html files
 
 gulp.task('copyhtml', function() {
 	gulp.src('src/*.html')
+	.pipe(htmlPartial({
+		basePath: 'src/partials/'
+	}))
 	.pipe(htmlmin({collapseWhitespace: true}))
 	.pipe(gulp.dest('dist'));
 });
