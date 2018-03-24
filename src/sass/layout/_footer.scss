@@ -1,0 +1,11 @@
+footer {
+  background: $matisse;
+  color: $white;
+  text-align: center;
+  font-weight: 300;
+  @include font-size(14px);
+
+  .container {
+    padding: 20px 0;
+  }
+}
