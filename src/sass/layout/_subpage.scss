@@ -1,11 +1,11 @@
 .subpage {
 
   .intro {
-    height: 50vh;
+    height: 40vh;
 
-    // @include screen('tablet') { 
-    //   height: 45vh;
-    // }
+    @include screen('tablet') { 
+      height: 65vh;
+    }
   }
 
   .content {
