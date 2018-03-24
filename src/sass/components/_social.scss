@@ -13,7 +13,7 @@
     border-radius: 100px;
     width: 40px;
     height: 40px;
-    @include screen('tablet') { 
+    @include screen('tablet-wide') { 
       width: 100px;
       height: 100px;
     }
