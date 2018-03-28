@@ -20,6 +20,16 @@
     height: 65vh;
   }
 
+  &.art {
+    background-image: url('/images/intro-bg-art-1.jpg');
+
+  }
+
+  &.design {
+    background-image: url('/images/intro-bg-design-1.jpg');
+
+  }
+
   .intro-container {
     h1,
     h2 {
