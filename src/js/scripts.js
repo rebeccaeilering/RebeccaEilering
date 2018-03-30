@@ -14,3 +14,8 @@ $(document).ready(function(){
 
   });
 });
+
+// Reveal Content on Scroll
+ 
+window.sr = ScrollReveal();
+sr.reveal('.boom');
