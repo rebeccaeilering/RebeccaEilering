@@ -90,7 +90,7 @@ gulp.task('watch', ['browser-sync'], function() {
 
 // Deploy project
 gulp.task('deploy', function() {
-  return gulp.src('dist/**/*')
+  return gulp.src('dist/**/*', { read: false })
     .pipe(deploy({
       repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches:   ['prod']
     }));
