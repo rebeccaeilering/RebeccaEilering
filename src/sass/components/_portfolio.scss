@@ -1,12 +1,11 @@
-.projects-grid-feature {
+.projects-grid {
   display: grid;
-  grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
   max-width: 100%;
   margin-bottom: 20px;
 
-  li{
-    // border: 1px dotted $matisse;
+  li {
 
     img {
       width: 100%;
