@@ -48,6 +48,7 @@
       }
       @include screen('tablet-wide') { 
         @include font-size(92px);  
+        line-height: 72px;
       }
     }
 

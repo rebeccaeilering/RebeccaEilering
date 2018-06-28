@@ -47,6 +47,7 @@
         }
 
         input[type=submit] {
+          -webkit-appearance: none;
           background: $matisse;
           color: $white;
           border: 0;
