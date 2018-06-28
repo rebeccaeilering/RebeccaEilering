@@ -41,13 +41,14 @@
       font-weight: 700;
       font-style: italic;
       text-shadow: 2px 2px 4px rgb(17, 17, 17);
-      line-height: 72px;
+      line-height: 40px;
 
       @include screen('tablet') { 
         @include font-size(60px);  
       }
       @include screen('tablet-wide') { 
-        @include font-size(92px);  
+        @include font-size(92px); 
+        line-height: 72px; 
       }
     }
 
