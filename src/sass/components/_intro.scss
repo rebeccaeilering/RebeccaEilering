@@ -47,8 +47,14 @@
         @include font-size(60px);  
       }
       @include screen('tablet-wide') { 
+<<<<<<< HEAD
         @include font-size(92px); 
         line-height: 72px; 
+=======
+        @include font-size(92px);  
+        line-height: 72px;
+        margin-bottom: 20px;
+>>>>>>> portgrid
       }
     }
 
