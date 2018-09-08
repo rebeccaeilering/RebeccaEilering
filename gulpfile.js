@@ -77,7 +77,7 @@ gulp.task('scripts', function() {
 
 // Run ALL tasks
 
-gulp.task('default', ['message', 'copyhtml', 'htmlminify', 'imageMin', 'sass', 'scripts', 'browser-sync']);
+gulp.task('default', ['message', 'copyhtml', 'imageMin', 'sass', 'scripts', 'browser-sync']);
 
 // Watch Gulp tasks
 
