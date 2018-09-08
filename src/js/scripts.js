@@ -13,6 +13,11 @@ $(document).ready(function(){
   $('#web-dev').hover(function() {
 
   });
+
+  $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+  });
+
 });
 
 // Reveal Content on Scroll
