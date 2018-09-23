@@ -7,12 +7,26 @@
 
   li {
 
-    img {
-      width: 100%;
+    .highlight-item {
       height: 250px;
-      object-fit: cover;
-      object-position: 100% 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: 100% 50%;
+        transition: all 2s;
+      }
+      &:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
     }
+
+
+    
 
     .projects-info {
       padding: 10px;
