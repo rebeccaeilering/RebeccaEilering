@@ -1,0 +1,17 @@
+
+.btn {
+  background: $matisse;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  transition: background-color .5s;
+
+  &:hover {
+    background: $pistachio;
+    color: #fff;
+  }
+
+  &.full-width {
+    display: block;
+  }
+}
