@@ -33,7 +33,7 @@ gulp.task('browser-sync',  ['sass'], function() {
 // Complile Partials, Copy and minify all html files
 
 gulp.task('copyhtml', function() {
-	gulp.src('src/*.html')
+	gulp.src('src/**/*.html')
 	.pipe(htmlPartial({
 		basePath: 'src/partials/'
 	}))
@@ -85,7 +85,7 @@ gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch('src/images/*', ['imageMin']);
 	gulp.watch('src/sass/**/*.scss', ['sass']);
-	gulp.watch('src/*.html', ['copyhtml']);
+	gulp.watch('src/**/*.html', ['copyhtml']);
 });
 
 // Deploy project
