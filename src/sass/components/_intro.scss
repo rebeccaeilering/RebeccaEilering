@@ -53,9 +53,10 @@
       }
     }
 
-    h2 {
+    span {
       @include font-size(18px);  
       font-weight: 400;
+      color: $white;
 
       @include screen('tablet-wide') { 
         @include font-size(28px);  
