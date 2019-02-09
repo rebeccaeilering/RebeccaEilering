@@ -33,7 +33,7 @@ gulp.task('browser-sync',  ['sass'], function() {
 // Complile Partials, Copy and minify all html files
 
 gulp.task('copyhtml', function() {
-	gulp.src('src/*.html')
+	gulp.src('src/**/*.html')
 	.pipe(htmlPartial({
 		basePath: 'src/partials/'
 	}))
