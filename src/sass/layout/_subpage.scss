@@ -1,10 +1,20 @@
 .subpage {
 
   .intro {
-    height: 40vh;
 
-    @include screen('tablet') { 
-      height: 65vh;
+    .intro-container {
+      h1 {
+        @include font-size(30px);  
+
+        @include screen('tablet') { 
+          @include font-size(50px); 
+        }
+
+        @include screen('tablet-wide') { 
+          @include font-size(70px); 
+
+        }
+      }
     }
   }
 
