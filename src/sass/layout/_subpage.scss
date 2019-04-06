@@ -22,6 +22,21 @@
     h3 {
       margin-top: 15px;
     }
+
+    .self {
+      width: 100%;
+
+      @include screen('tablet') { 
+        float: left;
+        max-width: 300px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      @include screen('tablet-wide') { 
+        margin-bottom: 0;
+      }
+    }
   }
 
   .skills {
