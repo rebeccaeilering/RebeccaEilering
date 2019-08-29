@@ -33,6 +33,13 @@
       position: relative;
       z-index: 100;
 
+      @include screen('tablet') { 
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        box-shadow: 5px 5px #ffffff;
+      }
+
       h3 {
         @include font-size(16px);  
       }
