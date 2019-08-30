@@ -25,6 +25,7 @@
 
     .self {
       width: 100%;
+      box-shadow: 5px 5px $matisse;
 
       @include screen('tablet') { 
         float: left;
