@@ -27,7 +27,7 @@ gulp.task('browser-sync',  ['sass'], function() {
         }
     });
     gulp.watch("src/sass/*.scss", ['sass']);
-    gulp.watch("src/*.html").on('change', reload);
+    gulp.watch("src/**/*.html").on('change', reload);
 });
 
 // Complile Partials, Copy and minify all html files
