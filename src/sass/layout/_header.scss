@@ -108,7 +108,6 @@
                         display: none;
                         min-width: 200px;
                         position: absolute;
-                        background-color: $sunflower;
                     }
 
                     li {
@@ -121,15 +120,18 @@
 
                             
                             @include screen('tablet') { 
+                                background-color: $sunflower;
                                 border-bottom: none;
                                 text-align: left;
                                 color: $black;
+                                transition: none;
 
+                                &:hover,
+                                &:focus {
+                                    background-color: $pistachio;
+                                    color: $white;
+                                }
                             }
-                        }
-
-                        &:hover,
-                        &:focus {
 
                         }
                     }
