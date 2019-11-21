@@ -21,7 +21,8 @@ a {
     color: $matisse;
 
     &:hover {
-        color: $sunflower;
+        color: $pistachio;
+        transition: color .5s;
     }
 }
 
