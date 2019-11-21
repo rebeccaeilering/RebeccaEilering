@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
+const htmlPartial = require('gulp-html-partial');
 var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
@@ -26,13 +27,16 @@ gulp.task('browser-sync',  ['sass'], function() {
         }
     });
     gulp.watch("src/sass/*.scss", ['sass']);
-    gulp.watch("src/*.html").on('change', reload);
+    gulp.watch("src/**/*.html").on('change', reload);
 });
 
-// Copy and minify all html files
+// Complile Partials, Copy and minify all html files
 
 gulp.task('copyhtml', function() {
-	gulp.src('src/*.html')
+	gulp.src('src/**/*.html')
+	.pipe(htmlPartial({
+		basePath: 'src/partials/'
+	}))
 	.pipe(htmlmin({collapseWhitespace: true}))
 	.pipe(gulp.dest('dist'));
 });
@@ -73,7 +77,7 @@ gulp.task('scripts', function() {
 
 // Run ALL tasks
 
-gulp.task('default', ['message', 'copyhtml', 'htmlminify', 'imageMin', 'sass', 'scripts', 'browser-sync']);
+gulp.task('default', ['message', 'copyhtml', 'imageMin', 'sass', 'scripts', 'browser-sync']);
 
 // Watch Gulp tasks
 
@@ -81,13 +85,13 @@ gulp.task('watch', ['browser-sync'], function() {
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch('src/images/*', ['imageMin']);
 	gulp.watch('src/sass/**/*.scss', ['sass']);
-	gulp.watch('src/*.html', ['copyhtml']);
+	gulp.watch('src/**/*.html', ['copyhtml']);
 });
 
 // Deploy project
 gulp.task('deploy', function() {
   return gulp.src('dist/**/*', { read: false })
     .pipe(deploy({
-      repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches:   ['prod']
+      repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches: ['prod']
     }));
 });

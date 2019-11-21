@@ -1,0 +1,92 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  max-width: 100%;
+  margin-bottom: 20px;
+
+  li {
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: 100% 50%;
+        transition: all 2s;
+      }
+
+    .projects-info {
+      padding: 10px;
+
+      h4 {
+        margin-bottom: 5px;
+  
+        span {
+          display: block;
+          font-weight: normal;
+          @include font-size(14px);  
+        }
+      }
+    }
+  }
+
+  &.web-dev {
+    li a {
+      position: relative;
+      color: $white;
+      width: 100%;
+      height: 200px;
+      display: block;
+
+      h3 {
+        position: absolute;
+        top: 0;
+        left: 40px;
+      }
+
+      .proj-bg {
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+        &.my45s {
+          background-image: url(/images/record-bg.jpg);
+        }
+  
+        &.parks {
+          background-image: url(/images/parks-bg.jpg);
+        }
+  
+        &.workout {
+          background-image: url(/images/workout-bg.jpg);
+        }
+      }
+
+      &::before {
+        content: '';
+        background-color: rgba(0, 0, 0,0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &::after {
+        content: '';
+        background-color: $sunflower;
+        position: absolute;
+        width: 20px;
+        height: 40px;
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        &::before {
+          content: '';
+          background-color: rgba(0, 0, 0,.3);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+
+.btn {
+  display: inline-block;
+  background: $matisse;
+  color: $white;
+  padding: 15px;
+  text-align: center;
+  transition: background-color .5s;
+
+  &:hover {
+    background: $pistachio;
+    color: $white;
+  }
+
+  &.full-width {
+    display: block;
+  }
+}

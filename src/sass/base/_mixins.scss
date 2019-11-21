@@ -1,5 +1,5 @@
 // Media Queries
-// usage: @include screen('phone') { .. }
+// usage: @include screen('phone') { .. } --- this is min width
 
 $breakpoints: (
     "phone":        400px,

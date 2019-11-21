@@ -1,13 +1,13 @@
 #mobile-nav {
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 10px;
   background-color: $pistachio;
-  width: 75px;
+  width: 40px;
   z-index: 1000;
   text-align: center;
   color: $white;
-  padding: 15px 0;
+  padding: 5px 0;
   @include font-size(25px); 
   border: 0; 
   cursor: pointer;
