@@ -7,7 +7,8 @@
   text-align: center;
   transition: background-color .5s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $pistachio;
     color: $white;
   }

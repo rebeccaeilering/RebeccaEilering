@@ -65,7 +65,8 @@
           margin-top: 1rem;
 
 
-          &:hover {
+          &:hover,
+          &:focus {
             background: $pistachio;
           }
         }
