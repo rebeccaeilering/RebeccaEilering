@@ -1,148 +1,150 @@
 .nav-section {
-    position: absolute;
+  position: absolute;
 
-    @include screen('tablet') { 
-        position: relative;
+  @include screen('tablet') {
+    position: relative;
 
+  }
+
+  .navigation {
+    position: relative;
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+
+    @include screen('tablet') {
+      margin: 0;
+      padding: 0;
     }
 
-    .navigation {
-        position: relative;
-        z-index: 9000;
-        display: flex;
-        justify-content: center;
-        padding: 0 2rem;
-        @include screen('tablet') { 
-            margin: 0;
-            padding: 0;
+    @include screen('tablet-wide') {
+      justify-content: flex-end;
+      max-width: 1000px;
+      width: 100%;
+      margin: auto;
+    }
+
+    nav {
+      display: none;
+      padding: 4rem 0;
+
+      @include screen('tablet') {
+        padding: 0;
+      }
+
+      #mobile-close {
+        display: none;
+      }
+
+      &.open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: $pistachio;
+        color: $white;
+        display: block;
+        overflow: auto;
+
+        #mobile-close {
+          position: fixed;
+          top: 0;
+          right: 10px;
+          width: 40px;
+          z-index: 1000;
+          text-align: center;
+          color: $white;
+          padding: 5px 0;
+          @include font-size(25px);
+          border: 0;
+          cursor: pointer;
+          background: transparent;
+          display: block;
         }
-        @include screen('tablet-wide') { 
-            justify-content: flex-end;
-            max-width: 1000px;
-            width: 100%;
-            margin: auto;
+      }
+
+      @include screen('tablet') {
+        display: block;
+      }
+
+      li {
+        list-style: none;
+        display: block;
+        text-align: center;
+
+        @include screen('tablet') {
+          display: inline-block;
         }
-    
-        nav {
+
+        a {
+          color: $white;
+          display: block;
+          @include font-size(25px);
+
+          @include screen('tablet') {
+            display: inline-block;
+            @include font-size(18px);
+            padding: 9px 1rem;
+            border-bottom: 4px solid transparent;
+          }
+
+          &:hover,
+          &:focus {
+            background: rgba(234, 197, 31, 0.25);
+            color: $white;
+
+            @include screen('tablet') {
+              border-bottom: 4px solid $sunflower;
+            }
+          }
+
+        }
+
+        ul.second-level {
+          display: block;
+          padding-left: 0;
+          margin-bottom: 0;
+
+          @include screen('tablet') {
             display: none;
-            padding: 4rem 0;
+            min-width: 200px;
+            position: absolute;
+          }
 
-            @include screen('tablet') { 
-                padding: 0;            
-            }
+          li {
+            display: block;
 
-            #mobile-close {
-                display: none;
-            }
+            a {
+              display: block;
+              padding: 9px 1rem;
+              @include font-size(16px);
 
-            &.open {
-                position: fixed;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background: $pistachio;
-                color: $white;
-                display: block;
-                overflow: auto;
 
-                #mobile-close {
-                    position: fixed;
-                    top: 0;
-                    right: 10px;
-                    width: 40px;
-                    z-index: 1000;
-                    text-align: center;
-                    color: $white;
-                    padding: 5px 0;
-                    @include font-size(25px); 
-                    border: 0; 
-                    cursor: pointer;
-                    background: transparent;
-                    display: block;
-                  }
+              @include screen('tablet') {
+                background-color: $sunflower;
+                border-bottom: none;
+                text-align: left;
+                color: $black;
+                transition: none;
+
+                &:hover,
+                &:focus {
+                  background-color: $pistachio;
+                  color: $white;
+                }
               }
-    
-            @include screen('tablet') { 
-                display: block;
+
             }
-    
-            li {
-                list-style: none;
-                display: block;
-                text-align: center;
-
-                @include screen('tablet') { 
-                    display: inline-block;
-                }
-    
-                a {
-                    color: $white;
-                    display: block;
-                    @include font-size(25px); 
-
-                    @include screen('tablet') { 
-                        display: inline-block;
-                        @include font-size(18px); 
-                        padding: 9px 1rem;
-                        border-bottom: 4px solid transparent;
-                    }
-
-                    &:hover,
-                    &:focus {
-                        background: rgba(234, 197, 31,0.25);
-                        color: $white;
-    
-                        @include screen('tablet') { 
-                            border-bottom: 4px solid $sunflower;
-                        }
-                    }
-
-                }
-
-                ul.second-level {
-                    display: block;
-                    padding-left: 0;
-                    margin-bottom: 0;
-                    @include screen('tablet') { 
-                        display: none;
-                        min-width: 200px;
-                        position: absolute;
-                    }
-
-                    li {
-                        display: block;
-
-                        a {
-                            display: block;
-                            padding: 9px 1rem;
-                            @include font-size(16px); 
-
-                            
-                            @include screen('tablet') { 
-                                background-color: $sunflower;
-                                border-bottom: none;
-                                text-align: left;
-                                color: $black;
-                                transition: none;
-
-                                &:hover,
-                                &:focus {
-                                    background-color: $pistachio;
-                                    color: $white;
-                                }
-                            }
-
-                        }
-                    }
-                  }
-            
-                  &:hover > ul.second-level,
-                  &:focus > ul.second-level {
-                    display: block;
-                  }
-            }
+          }
         }
-    }
-}
 
+        &:hover>ul.second-level,
+        &:focus>ul.second-level {
+          display: block;
+        }
+      }
+    }
+  }
+}

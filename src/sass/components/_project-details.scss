@@ -1,5 +1,5 @@
 .project-info {
-  @include screen('tablet') { 
+  @include screen('tablet') {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
@@ -19,6 +19,6 @@ ul ul {
   padding-left: 30px;
 
   li {
-    list-style: square; 
+    list-style: square;
   }
 }

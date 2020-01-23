@@ -8,8 +8,7 @@
     margin-bottom: 0;
   }
 
-
-  @include screen('tablet') { 
+  @include screen('tablet') {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 600px;
@@ -33,7 +32,7 @@
       position: relative;
       z-index: 100;
 
-      @include screen('tablet') { 
+      @include screen('tablet') {
         position: absolute;
         left: -10px;
         top: -10px;
@@ -41,7 +40,7 @@
       }
 
       h3 {
-        @include font-size(16px);  
+        @include font-size(16px);
       }
     }
   }
@@ -54,17 +53,17 @@
     align-items: center;
     background: transparent;
 
-    @include screen('tablet') { 
+    @include screen('tablet') {
       grid-column: 3;
       grid-row: 1 / span 1;
     }
 
     h2 {
-      @include font-size(60px);  
+      @include font-size(60px);
       color: $matisse;
     }
   }
-  
+
   // Web dev
   .box:nth-child(2) {
     grid-column: 1;
@@ -74,12 +73,12 @@
     background-size: cover;
     box-shadow: 5px 5px rgba(32, 111, 175, .5);
 
-    @include screen('tablet') { 
+    @include screen('tablet') {
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
     }
-
   }
+
   // Design
   .box:nth-child(3) {
     grid-column: 1;
@@ -89,7 +88,7 @@
     background-size: cover;
     box-shadow: 5px 5px rgba(130, 191, 10, .5);
 
-    @include screen('tablet') { 
+    @include screen('tablet') {
       grid-column: 1 / span 2;
       grid-row: 3;
     }
@@ -108,8 +107,7 @@
     background-size: cover;
     box-shadow: 5px 5px rgba(234, 197, 31, .5);
 
-
-    @include screen('tablet') { 
+    @include screen('tablet') {
       grid-column: 3;
       grid-row: 2 / span 2;
     }
@@ -118,5 +116,4 @@
       background: $sunflower;
     }
   }
-
 }
