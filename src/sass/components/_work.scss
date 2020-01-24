@@ -1,27 +1,38 @@
+.work h2 {
+  @include font-size(60px);
+  color: $matisse;
+  margin-bottom: 50px;
+}
+
 .work-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
 
-  h3 {
-    margin-bottom: 0;
-  }
-
   @include screen('tablet') {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 300px;
     grid-gap: 2rem;
   }
 
   a.box {
     background: $white;
     position: relative;
+    background-size: cover;
+    grid-column: 1;
+    transition: box-shadow .3s ease-in;
 
-    &:hover,
-    &:focus {
-      box-shadow: 5px 5px $white;
+    &:before {
+      content: '';
+      background: rgba(0,0,0,0.25);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: background .3s ease-in;
     }
 
     .title {
@@ -41,79 +52,48 @@
 
       h3 {
         @include font-size(16px);
+        margin-bottom: 0;
       }
     }
-  }
 
-  // What I do
-  .box:nth-child(1) {
-    grid-column: 1;
-    grid-row: 1;
-    display: flex;
-    align-items: center;
-    background: transparent;
-
-    @include screen('tablet') {
-      grid-column: 3;
-      grid-row: 1 / span 1;
+    &:first-child {
+      grid-row: 2;
+      border-bottom: 10px solid $matisse;
+      background-image: url('/images/img-webdev.jpg');
+      background-position: top center;
+      box-shadow: 5px 5px rgba(32, 111, 175, .5);
+  
+      @include screen('tablet') {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+      }
     }
+  
+    &:last-child {
+      grid-row: 4;
+      border-bottom: 10px solid $sunflower;
+      background-image: url('/images/img-art.jpeg');
+      box-shadow: 5px 5px rgba(234, 197, 31, .5);
 
-    h2 {
-      @include font-size(60px);
-      color: $matisse;
+      @include screen('tablet') {
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 2;
+      }
+
+      .title {
+        background: $sunflower;
+        color: $black;
+      }
     }
-  }
+    
+    &:hover,
+    &:focus {
+      box-shadow: 5px 5px rgba(255, 255, 255, .5);
 
-  // Web dev
-  .box:nth-child(2) {
-    grid-column: 1;
-    grid-row: 2;
-    border-bottom: 10px solid $matisse;
-    background-image: url('/images/img-webdev.jpg');
-    background-size: cover;
-    box-shadow: 5px 5px rgba(32, 111, 175, .5);
-
-    @include screen('tablet') {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
-    }
-  }
-
-  // Design
-  .box:nth-child(3) {
-    grid-column: 1;
-    grid-row: 3;
-    border-bottom: 10px solid $pistachio;
-    background-image: url('/images/img-desgin.jpeg');
-    background-size: cover;
-    box-shadow: 5px 5px rgba(130, 191, 10, .5);
-
-    @include screen('tablet') {
-      grid-column: 1 / span 2;
-      grid-row: 3;
-    }
-
-    .title {
-      background: $pistachio;
-    }
-  }
-
-  // Art
-  .box:nth-child(4) {
-    grid-column: 1;
-    grid-row: 4;
-    border-bottom: 10px solid $sunflower;
-    background-image: url('/images/img-art.jpeg');
-    background-size: cover;
-    box-shadow: 5px 5px rgba(234, 197, 31, .5);
-
-    @include screen('tablet') {
-      grid-column: 3;
-      grid-row: 2 / span 2;
-    }
-
-    .title {
-      background: $sunflower;
+      &:before {
+        content: '';
+        background: transparent;
+      }
     }
   }
 }

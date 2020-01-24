@@ -92,6 +92,6 @@ gulp.task('watch', ['browser-sync'], function() {
 gulp.task('deploy', function() {
   return gulp.src('dist/**/*', { read: false })
     .pipe(deploy({
-      repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches: ['prod']
+      repository: 'https://github.com/rebeccaeilering/RebeccaEilering.git', branches: ['staging']
     }));
 });
