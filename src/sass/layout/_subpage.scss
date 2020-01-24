@@ -1,17 +1,15 @@
 .subpage {
-
   .intro {
-
     .intro-container {
       h1 {
-        @include font-size(30px);  
+        @include font-size(30px);
 
-        @include screen('tablet') { 
-          @include font-size(50px); 
+        @include screen('tablet') {
+          @include font-size(50px);
         }
 
-        @include screen('tablet-wide') { 
-          @include font-size(70px); 
+        @include screen('tablet-wide') {
+          @include font-size(70px);
 
         }
       }
@@ -27,14 +25,14 @@
       width: 100%;
       box-shadow: 5px 5px $matisse;
 
-      @include screen('tablet') { 
+      @include screen('tablet') {
         float: left;
         max-width: 300px;
         margin-right: 20px;
         margin-bottom: 20px;
       }
 
-      @include screen('tablet-wide') { 
+      @include screen('tablet-wide') {
         margin-bottom: 0;
       }
     }
@@ -65,7 +63,6 @@
     padding-bottom: 1rem;
     border-bottom: 1px dotted $sunflower;
 
-    
     .time-place {
       display: flex;
       justify-content: space-between;
@@ -74,12 +71,11 @@
     .job-position {
       font-style: italic;
       font-weight: 300;
-      @include font-size(14px);  
+      @include font-size(14px);
     }
 
     .job-time {
-      @include font-size(14px);  
+      @include font-size(14px);
     }
   }
-
 }

@@ -29,7 +29,6 @@
       padding: 2rem;
 
       form {
-
         label,
         input[type=text],
         textarea {
@@ -64,8 +63,8 @@
           transition: background .5s;
           margin-top: 1rem;
 
-
-          &:hover {
+          &:hover,
+          &:focus {
             background: $pistachio;
           }
         }

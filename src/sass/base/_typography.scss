@@ -1,50 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass:300,400,800,300i,400i,600i,700i,800i');
 
 h1 {
-    @include font-size(36px);  
+  @include font-size(36px);
 }
 
 h2 {
-    @include font-size(32px);  
-    line-height: 35px;
-    margin-bottom: 15px;
+  @include font-size(32px);
+  line-height: 35px;
+  margin-bottom: 15px;
 }
 
 h3 {
-    @include font-size(28px); 
-    line-height: 30px;
-    margin-bottom: 15px; 
+  @include font-size(28px);
+  line-height: 30px;
+  margin-bottom: 15px;
 }
 
 h4 {
-    @include font-size(20px);  
+  @include font-size(20px);
 }
 
 a {
-    text-decoration: none;
-    color: $matisse;
-    transition: color .5s;
+  text-decoration: none;
+  color: $matisse;
+  transition: color .5s;
 
 
-    &:hover,
-    &:focus {
-        color: $pistachio;
-    }
+  &:hover,
+  &:focus {
+    color: $pistachio;
+  }
 }
 
 ul,
 h4,
 p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .endnote {
-    @include font-size(12px);  
+  @include font-size(12px);
 }
-
-
-
