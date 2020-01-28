@@ -1,8 +1,8 @@
 #mobile-nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 10px;
-  background-color: $pistachio;
+  background: transparent;
   width: 40px;
   z-index: 1000;
   text-align: center;
@@ -14,5 +14,45 @@
 
   @include screen('tablet') { 
     display: none;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+nav {
+  #mobile-close {
+    display: none;
+  }
+
+  &.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: .95);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    #mobile-close {
+      position: fixed;
+      top: 0;
+      right: 10px;
+      width: 40px;
+      z-index: 1000;
+      text-align: center;
+      color: $white;
+      padding: 5px 0;
+      @include font-size(25px);
+      border: 0;
+      cursor: pointer;
+      background: transparent;
+      display: block;
+    }
   }
 }

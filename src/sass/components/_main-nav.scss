@@ -1,0 +1,96 @@
+nav {
+  display: none;
+
+  @include screen('tablet') {
+    padding: 0;
+  }
+
+  @include screen('tablet') {
+    display: block;
+  }
+
+  ul {
+    margin-bottom: 0;
+    width: 100%;
+
+    @include screen('tablet') {
+      width: auto;
+    }
+  }
+
+  li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+
+    @include screen('tablet') {
+      display: inline-block;
+      padding: 0;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      @include font-size(25px);
+
+      @include screen('tablet') {
+        display: inline-block;
+        @include font-size(18px);
+        padding: 9px 1rem;
+        border-bottom: 4px solid transparent;
+      }
+
+      &:hover,
+      &:focus {
+        background: rgba(234, 197, 31, 0.25);
+        color: $white;
+
+        @include screen('tablet') {
+          border-bottom: 4px solid $sunflower;
+        }
+      }
+
+    }
+
+    ul.second-level {
+      display: block;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      @include screen('tablet') {
+        display: none;
+        position: absolute;
+      }
+
+      li {
+        display: block;
+
+        a {
+          padding: 9px 1rem;
+          @include font-size(16px);
+
+          @include screen('tablet') {
+            background-color: $sunflower;
+            border-bottom: none;
+            text-align: left;
+            color: $black;
+            width: 100%;
+            transition: none;
+
+            &:hover,
+            &:focus {
+              background-color: $pistachio;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover>ul.second-level,
+    &:focus>ul.second-level {
+      display: block;
+    }
+  }
+}
