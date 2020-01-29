@@ -1,8 +1,8 @@
 .intro {
-  background-image: url('/images/intro-bg-1.jpg');
+  background-image: url('/images/intro-bg-vintage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $matisse;
+  background-color: darken($matisse, 20%);
   background-blend-mode: multiply;
   display: flex;
   justify-content: center;
@@ -26,11 +26,6 @@
 
   &.art {
     background-image: url('/images/intro-bg-art-1.jpg');
-
-  }
-
-  &.design {
-    background-image: url('/images/intro-bg-design-1.jpg');
   }
 
   .intro-container {

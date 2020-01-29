@@ -1,14 +1,20 @@
 .work h2 {
   @include font-size(60px);
   color: $matisse;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @include screen('tablet') {
+    margin-bottom: 50px;
+
+  }
 }
 
 .work-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
+  height: 400px;
 
   @include screen('tablet') {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -21,7 +27,6 @@
     background: $white;
     position: relative;
     background-size: cover;
-    grid-column: 1;
     transition: box-shadow .3s ease-in;
 
     &:before {
@@ -57,22 +62,21 @@
     }
 
     &:first-child {
-      grid-row: 2;
+      grid-row: 1 / span 2;
       border-bottom: 10px solid $matisse;
-      background-image: url('/images/img-webdev.jpg');
+      background-image: url('/images/web-dev-wid-1.jpg');
       background-position: top center;
       box-shadow: 5px 5px rgba(32, 111, 175, .5);
   
       @include screen('tablet') {
         grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
       }
     }
   
     &:last-child {
-      grid-row: 4;
+      grid-row: 3 / span 2;
       border-bottom: 10px solid $sunflower;
-      background-image: url('/images/img-art.jpeg');
+      background-image: url('/images/printz-wid-1.jpg');
       box-shadow: 5px 5px rgba(234, 197, 31, .5);
 
       @include screen('tablet') {
