@@ -90,7 +90,8 @@ nav {
     }
 
     &:hover>ul.second-level,
-    &:focus>ul.second-level {
+    &:focus>ul.second-level, 
+    &:focus-within>ul.second-level {
       display: block;
     }
   }

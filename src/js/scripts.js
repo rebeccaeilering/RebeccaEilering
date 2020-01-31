@@ -6,7 +6,6 @@ document.getElementById('mobile-nav').addEventListener('click', function () {
 document.getElementById('mobile-close').addEventListener('click', function () {
   document.querySelector('nav').classList.remove('open');
   document.getElementById('mobile-nav').classList.remove('hide');
-
 });
 
 $(document).ready(function(){
