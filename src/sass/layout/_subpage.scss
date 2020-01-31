@@ -57,25 +57,4 @@
       }
     }
   }
-
-  .job {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted $sunflower;
-
-    .time-place {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .job-position {
-      font-style: italic;
-      font-weight: 300;
-      @include font-size(14px);
-    }
-
-    .job-time {
-      @include font-size(14px);
-    }
-  }
 }

@@ -24,16 +24,23 @@ $breakpoints: ("phone": 400px,
   }
 }
 
-// Font Size
-// usage: @include font-size(16px);
+// Calc to Rem
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return $remSize * 1rem;
 }
 
+// usage: @include font-size(16px);
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+
+// convert any property px value to rem
+// usage: @include rem(margin, 16px);
+@mixin rem($propertie, $size) {
+  #{$propertie}: $size;
+  #{$propertie}: calculateRem($size);
 }
 
 // Vendor Prefixing

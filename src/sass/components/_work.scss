@@ -1,14 +1,3 @@
-.work h2 {
-  @include font-size(60px);
-  color: $matisse;
-  margin-bottom: 30px;
-
-  @include screen('tablet') {
-    margin-bottom: 50px;
-
-  }
-}
-
 .work-container {
   display: grid;
   grid-template-columns: 1fr;

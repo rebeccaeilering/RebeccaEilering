@@ -1,0 +1,24 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  @include rem(grid-gap, 20px);
+
+  max-width: 100%;
+  @include rem(margin-bottom, 20px);
+
+  .card {
+    @include rem(padding, 20px);
+    box-shadow: 5px 5px rgba($matisse, .5);
+    border: 1px solid rgba($matisse, .5);
+  
+    .job-position {
+      font-style: italic;
+      font-weight: 300;
+      @include font-size(14px);
+    }
+  
+    .job-time {
+      @include font-size(14px);
+    }
+  }
+}

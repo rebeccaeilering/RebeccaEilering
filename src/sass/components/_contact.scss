@@ -21,12 +21,6 @@
       grid-gap: 2rem;
     }
 
-    .c-box h2 {
-      @include font-size(60px);  
-      color: $matisse;
-      margin-bottom: 30px;
-    }
-
     .c-box:nth-child(1) {
       background: transparent;
       grid-column: 1;
