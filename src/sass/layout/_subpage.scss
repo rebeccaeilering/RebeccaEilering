@@ -18,7 +18,7 @@
 
   .content {
     h3 {
-      margin-top: 15px;
+      @include rem(margin-top, 15px);
     }
 
     .self {
@@ -28,8 +28,8 @@
       @include screen('tablet') {
         float: left;
         max-width: 300px;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        @include rem(margin-right, 20px);
+        @include rem(margin-bottom, 20px);
       }
 
       @include screen('tablet-wide') {
@@ -52,8 +52,11 @@
       li {
         display: inline-block;
         padding: 10px;
+        @include rem(padding, 10px);
+
         border: 1px dotted $pistachio;
         margin: 0 10px 20px 0;
+        @include rem(margin, 0 10px 20px 0);
       }
     }
   }

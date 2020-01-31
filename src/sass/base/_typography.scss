@@ -7,14 +7,15 @@ h1 {
 h2 {
   @include font-size(32px);
   line-height: 35px;
-  margin-bottom: 30px;
+  @include rem(margin-bottom, 30px);
+
   color: $matisse;
 }
 
 h3 {
   @include font-size(28px);
   line-height: 30px;
-  margin-bottom: 15px;
+  @include rem(margin-bottom, 15px);
 }
 
 h4 {
@@ -36,7 +37,7 @@ a {
 ul,
 h4,
 p {
-  margin-bottom: 15px;
+  @include rem(margin-bottom, 15px);
 }
 
 li {

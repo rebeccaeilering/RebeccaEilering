@@ -1,15 +1,14 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  @include rem(grid-gap, 20px);
-
+  @include rem(grid-gap, 15px);
   max-width: 100%;
   @include rem(margin-bottom, 20px);
 
   .card {
-    @include rem(padding, 20px);
     box-shadow: 5px 5px rgba($matisse, .5);
     border: 1px solid rgba($matisse, .5);
+    @include rem(padding, 15px);
   
     .job-position {
       font-style: italic;

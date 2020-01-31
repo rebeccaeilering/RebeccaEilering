@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
   max-width: 100%;
-  margin-bottom: 20px;
+  @include rem(margin-bottom, 20px);
 
   li {
     img {
@@ -18,7 +18,7 @@
       padding: 10px;
 
       h4 {
-        margin-bottom: 5px;
+        @include rem(margin-bottom, 5px);
 
         span {
           display: block;

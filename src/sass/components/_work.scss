@@ -32,7 +32,7 @@
     .title {
       background: $matisse;
       color: $white;
-      padding: 10px 20px;
+      @include rem(padding, 10px 20px);
       display: inline-block;
       position: relative;
       z-index: 100;

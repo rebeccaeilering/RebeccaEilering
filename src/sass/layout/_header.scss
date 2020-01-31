@@ -18,9 +18,9 @@ header {
 
   .branding {
     color: $white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
+    @include rem(padding-bottom, 5px);
+    @include rem(padding-top, 5px);
+
     h1 {
       @include font-size(20px);
 

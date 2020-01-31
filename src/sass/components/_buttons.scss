@@ -2,7 +2,8 @@
   display: inline-block;
   background: $matisse;
   color: $white;
-  padding: 15px;
+  @include rem(padding, 15px);
+
   text-align: center;
   transition: background-color .5s;
 

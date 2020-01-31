@@ -19,7 +19,7 @@ body {
 
 section {
   width: 100%;
-  margin: 0 2rem;
+  @include rem(margin, 32px);
   position: relative;
   margin: 0;
 
@@ -31,10 +31,10 @@ section {
 .container {
   width: 90%;
   margin: 0 auto;
-  padding: 2rem 0;
+  @include rem(padding, 32px 0);
 
   @include screen('desktop') {
-    padding: 4rem 0;
+    @include rem(padding, 64px 0);
     width: 100%;
     max-width: 1000px;
   }
@@ -46,8 +46,8 @@ section {
 
     .content-intro {
       border-bottom: 1px dotted $matisse;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
+      @include rem(padding-bottom, 16px);
+      @include rem(margin-bottom, 16px);
     }
   }
 }

@@ -6,6 +6,6 @@ footer {
   @include font-size(14px);
 
   .container {
-    padding: 20px 0;
+    @include rem(padding, 20px 0);
   }
 }
