@@ -3,7 +3,9 @@
   background: $matisse;
   color: $white;
   @include rem(padding, 15px);
+  @include rem(padding-bottom, 11px);
 
+  text-transform: uppercase;
   text-align: center;
   transition: background-color .5s;
 
