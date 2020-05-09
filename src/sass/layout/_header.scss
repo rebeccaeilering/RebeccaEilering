@@ -28,5 +28,9 @@ header {
         @include font-size(26px);
       }
     }
+
+    a {
+      color: $white;
+    }
   }
 }

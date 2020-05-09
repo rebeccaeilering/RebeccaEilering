@@ -26,6 +26,10 @@
     height: 50vh;
   }
 
+  @include screen('desktop') { 
+    height: 70vh;
+  }
+
   &.art {
     background-image: url('/images/intro-bg-art-1.jpg');
   }
