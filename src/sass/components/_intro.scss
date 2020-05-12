@@ -56,6 +56,12 @@
         @include font-size(92px);  
         line-height: 90px;
       }
+
+      &.fadeInDown {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+      }
     }
 
     span {
@@ -67,5 +73,17 @@
         @include font-size(28px);  
       }
     }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
