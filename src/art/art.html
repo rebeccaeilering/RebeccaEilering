@@ -103,9 +103,9 @@
         </div>
         <div class="projects">
           <h4>Portfolio Highlights</h4>
-          <ul class="projects-grid">
+          <ul class="projects-grid gallery">
             <li>
-              <a data-fancybox="gallery" href="/images/art/academy-web.jpg" data-title="Academy"
+              <a href="/images/art/academy-web.jpg" data-title="Academy"
                 data-desc="Charcoal on paper"><img src="/images/art/academy-web.jpg" alt=""></a>
               <div class="projects-info">
                 <h4>Academy
@@ -113,7 +113,7 @@
               </div>
             </li>
             <li>
-              <a data-fancybox="gallery" href="/images/art/Monroe-Treehouse.jpg" data-title="Monroe Treehouse"
+              <a href="/images/art/Monroe-Treehouse.jpg" data-title="Monroe Treehouse"
                 data-desc="Graphite on paper"><img src="/images/art/Monroe-Treehouse.jpg" alt=""></a>
               <div class="projects-info">
                 <h4>Monroe Treehouse
@@ -121,7 +121,7 @@
               </div>
             </li>
             <li>
-              <a data-fancybox="gallery" href="/images/art/hyde-house.jpg" data-title="Hyde House"
+              <a href="/images/art/hyde-house.jpg" data-title="Hyde House"
                 data-desc="Charcoal on paper"><img src="/images/art/hyde-house.jpg" alt=""></a>
               <div class="projects-info">
                 <h4>Hyde House
@@ -137,7 +137,14 @@
   <partial src="_contact.html"></partial>
   <partial src="_social.html"></partial>
   <partial src="_footer.html"></partial>
+  <script src="../js/baguetteBox.js"></script>
   <script src="../js/scripts.js"></script>
+  <script>
+    window.onload = function() {
+      baguetteBox.run('.gallery');
+      console.log('run')
+    };
+  </script>
 </body>
 
 </html>
