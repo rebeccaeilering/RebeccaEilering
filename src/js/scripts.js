@@ -11,11 +11,6 @@ mobileClose.addEventListener('click', function() {
   nav.classList.remove('open');
   mobileNav.classList.remove('hide');
 });
-
-$(document).ready(function(){
-  $('[data-fancybox="gallery"]').fancybox({
-  });
-});
  
 window.sr = ScrollReveal();
 sr.reveal('.boom');
