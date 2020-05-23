@@ -23,6 +23,7 @@ nav {
     display: block;
     text-align: center;
     @include rem(padding, 5px 0);
+    margin-left: 0;
 
     @include screen('tablet') {
       display: inline-block;
@@ -66,6 +67,8 @@ nav {
 
       li {
         display: block;
+        list-style: none;
+        margin-left: 0;
 
         a {
           @include rem(padding, 9px 16px);

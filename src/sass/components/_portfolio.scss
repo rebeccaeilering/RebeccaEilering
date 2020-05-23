@@ -10,6 +10,8 @@
   @include rem(margin-bottom, 20px);
 
   li {
+    list-style: none;
+    margin-left: 0;
     img {
       width: 100%;
       height: 250px;

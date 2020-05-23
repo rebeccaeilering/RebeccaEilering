@@ -1,0 +1,45 @@
+blockquote {
+  position: relative;
+  border-left: 8px solid $matisse;
+  @include rem(margin, 20px 0);
+  @include rem(padding, 20px);
+
+  &:before {
+    content: '\f10d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    color: $pistachio;
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    background: -webkit-linear-gradient(-45deg, $pistachio, $matisse);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-bottom: 2px solid $matisse;
+    border-right: 2px solid $matisse;
+  }
+
+  p {
+    padding-left: 100px;
+    font-style: italic;
+    font-size: 22px;
+  }
+
+  footer {
+    background: transparent;
+    color: $black;
+    text-align: right;
+  }
+}

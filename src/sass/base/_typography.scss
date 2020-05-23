@@ -35,6 +35,7 @@ a {
 }
 
 ul,
+ol,
 h4,
 p {
   @include rem(margin-bottom, 15px);
@@ -45,7 +46,7 @@ p {
 }
 
 li {
-  list-style: none;
+  margin-left: 20px;
 }
 
 .endnote {

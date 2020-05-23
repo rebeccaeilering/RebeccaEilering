@@ -2,8 +2,8 @@
   display: inline-block;
   background: $matisse;
   color: $white;
-  @include rem(padding, 12px 15px 15px 15px);
-  @include rem(padding-bottom, 11px);
+  @include rem(padding, 12px 15px 11px 15px);
+  @include rem(margin-bottom, 20px);
 
   text-transform: uppercase;
   text-align: center;
