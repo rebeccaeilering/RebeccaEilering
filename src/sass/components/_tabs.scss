@@ -1,0 +1,48 @@
+.tab-container {
+  overflow: hidden;
+  background: #fff;
+
+  [role=tablist] {
+    display: flex;
+    margin: 0;
+    @include rem(padding, 20px 0px 0px 20px);
+    background: $matisse;
+  }
+
+  [role=tab] {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    @include rem(padding, 14px);
+    @include rem(margin-left, 0);
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &[aria-selected=true] {
+      color: $black;
+      background: $white;
+    }
+  }
+
+  main {
+    @include rem(padding, 20px);
+    position: relative;
+
+    [role=tabpanel] {
+      display: none;
+
+      &[aria-expanded=true] {
+        display: block;
+      }
+    }
+  }
+}
