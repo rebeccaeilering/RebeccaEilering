@@ -17,19 +17,23 @@ sr.reveal('.boom');
 
 // Responsive Tables
 
-const headertext = [],
-headers = document.querySelectorAll("table th"),
-tablerows = document.querySelectorAll("table th"),
-tablebody = document.querySelector("table tbody");
+const tables = document.querySelector('table');
 
-for(let i = 0; i < headers.length; i++) {
-  const current = headers[i];
-  headertext.push(current.textContent.replace(/\r?\n|\r/,""));
-} 
-for (let i = 0, row; row = tablebody.rows[i]; i++) {
-  for (let j = 0, col; col = row.cells[j]; j++) {
-    col.setAttribute("data-th", headertext[j]);
+if (tables) {
+  const headertext = [],
+  headers = document.querySelectorAll("table th"),
+  tablerows = document.querySelectorAll("table th"),
+  tablebody = document.querySelector("table tbody");
+
+  for(let i = 0; i < headers.length; i++) {
+    const current = headers[i];
+    headertext.push(current.textContent.replace(/\r?\n|\r/,""));
   } 
+  for (let i = 0, row; row = tablebody.rows[i]; i++) {
+    for (let j = 0, col; col = row.cells[j]; j++) {
+      col.setAttribute("data-th", headertext[j]);
+    } 
+  }
 }
 
 // Accordions
