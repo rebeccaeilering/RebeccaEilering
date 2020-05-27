@@ -1,0 +1,67 @@
+.accordions {
+  width: 100%;
+
+  .accordion-btn {
+    position: relative;
+    display: block;
+    @include rem(margin, -1px 0 0);
+    border: none;
+    border-bottom: 2px solid $white;
+    @include rem(padding, 15px);
+    width: 100%;
+    text-align: left;
+    color: $white;
+    @include font-size(16px);
+    background: $matisse;
+
+    &:focus, 
+    &:hover {
+      background: darken( $matisse, 5%);
+      color: $white;
+      outline: none;
+      
+      &::after {
+        border-top-color: $white;
+      }
+    }
+    
+    &::after {
+      content: '\f067';
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+
+    &.expanded {
+      background: darken( $matisse, 5%);
+      color: $white;
+
+      &::after {
+        content: '\f068';
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+      }
+    }
+  }
+
+  .accordion-section {
+    background: $white;
+    max-height: 0vh;
+    overflow: hidden;
+    padding: 0;
+
+    &.open {
+      max-height: 100vh;
+      overflow: auto;
+      @include rem(padding, 15px);
+      visibility: visible;
+    }
+  }
+
+
+}
