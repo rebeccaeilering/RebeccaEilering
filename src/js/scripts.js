@@ -118,7 +118,6 @@ class TabController {
   }
 
   // Public function to set the tab by id
-  // This can be called by the developer too.
   setActiveTab(id) {
     for (let tab of this.tabs) {
       if (tab.getAttribute('aria-controls') == id) {
