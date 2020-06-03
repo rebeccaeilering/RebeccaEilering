@@ -14,13 +14,28 @@ mobileClose.addEventListener('click', function() {
 
 // If element has class .has-children append anchor tag with a span tag containing a toggler
 // toggler with open/close sencond level nav
-const hasChildren = document.querySelectorAll('.has-children a.a1');
-console.log(hasChildren);
+const hasChildren = document.querySelectorAll('.has-children');
+let num1 = 0;
 
 hasChildren.forEach(child => {
-  child.innerHTML += ` <button><i class="fas fa-plus-circle"></i></button>`;
-})
+  num1++;
+  child.innerHTML += ` <button id="nav-toggle-${num1}"><i class="fas fa-plus-circle"></i></button>`;
+});
 
+const navBtns = document.querySelectorAll('nav button');
+let num2 = 0;
+
+navBtns.forEach(button => {
+  const num = button.getAttribute('id').split('-').pop();
+  const slSection = document.getElementById(`sl-${num}`);
+
+  button.addEventListener('click', () => {
+    console.log('clicked');
+    button.classList.toggle('expanded');
+    slSection.classList.toggle('open');
+  });
+
+});
 
  
 window.sr = ScrollReveal();

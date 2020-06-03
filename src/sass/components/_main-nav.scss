@@ -10,29 +10,50 @@ nav {
   }
 
   ul {
+    margin-top: 60px;
     margin-bottom: 0;
     width: 100%;
 
     @include screen('tablet') {
       width: auto;
+      margin-top: 0;
     }
   }
 
   li {
+    position: relative;
     list-style: none;
     display: block;
-    text-align: center;
+    text-align: left;
     @include rem(padding, 5px 0);
     margin-left: 0;
 
     @include screen('tablet') {
+      position: unset;
       display: inline-block;
       padding: 0;
+    }
+
+    button {
+      position: absolute;
+      top: 8px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: $sunflower;
+      padding: 0 20px;
+      z-index: 900;
+      @include font-size(25px);
+
+      @include screen('tablet') {
+        display: none;
+      }
     }
 
     a {
       color: $white;
       display: block;
+      // display: inline-block;
       @include font-size(25px);
 
       @include screen('tablet') {
@@ -52,16 +73,23 @@ nav {
           border-bottom: 4px solid $sunflower;
         }
       }
-
     }
 
     ul.second-level {
       display: none;
       padding-left: 0;
       margin-bottom: 0;
+      margin-top: 0;
 
       @include screen('tablet') {
         position: absolute;
+      }
+
+      &.open {
+        display: block;
+        @include screen('tablet') {
+          display: none;
+        }
       }
 
       li {

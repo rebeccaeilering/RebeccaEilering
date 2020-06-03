@@ -35,10 +35,12 @@ nav {
     right: 0;
     background-color: rgba($color: #000000, $alpha: .95);
     color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: flex-start;
     overflow: auto;
+    padding: 0 20px;
 
     #mobile-close {
       position: fixed;
