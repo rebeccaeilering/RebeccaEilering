@@ -11,6 +11,17 @@ mobileClose.addEventListener('click', function() {
   nav.classList.remove('open');
   mobileNav.classList.remove('hide');
 });
+
+// If element has class .has-children append anchor tag with a span tag containing a toggler
+// toggler with open/close sencond level nav
+const hasChildren = document.querySelectorAll('.has-children a.a1');
+console.log(hasChildren);
+
+hasChildren.forEach(child => {
+  child.innerHTML += ` <button><i class="fas fa-plus-circle"></i></button>`;
+})
+
+
  
 window.sr = ScrollReveal();
 sr.reveal('.boom');
@@ -39,30 +50,31 @@ if (tables) {
 // Accordions
 const accordions = document.querySelectorAll('.accordions');
 let num = 0;
-accordions.forEach(accordions => {
-  num++;
-  accordions.setAttribute('id', `accordionGroup-${num}`);
-});
-
-const accordionBtns = document.querySelectorAll('.accordion-btn');
-const button = document.querySelector('button');
-
-accordionBtns.forEach(button => {
-  const num = button.getAttribute('id').split('-').pop();
-  const associatedSection = document.getElementById(`accordion-section-${num}`);
-
-  button.addEventListener('click', () => {
-    button.classList.toggle('expanded');
-    associatedSection.classList.toggle('open');
-    if (button.classList.contains('expanded')) {
-      button.setAttribute('aria-expanded', true);
-      associatedSection.setAttribute('aria-hidden', false);
-    } else {
-      button.setAttribute('aria-expanded', false);
-      associatedSection.setAttribute('aria-hidden', true);
-    }
+if (accordions) {
+  accordions.forEach(accordions => {
+    num++;
+    accordions.setAttribute('id', `accordionGroup-${num}`);
   });
-});
+
+  const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+  accordionBtns.forEach(button => {
+    const num = button.getAttribute('id').split('-').pop();
+    const associatedSection = document.getElementById(`accordion-section-${num}`);
+
+    button.addEventListener('click', () => {
+      button.classList.toggle('expanded');
+      associatedSection.classList.toggle('open');
+      if (button.classList.contains('expanded')) {
+        button.setAttribute('aria-expanded', true);
+        associatedSection.setAttribute('aria-hidden', false);
+      } else {
+        button.setAttribute('aria-expanded', false);
+        associatedSection.setAttribute('aria-hidden', true);
+      }
+    });
+  });
+}
 
 // Tabs
 

@@ -56,12 +56,11 @@ nav {
     }
 
     ul.second-level {
-      display: block;
+      display: none;
       padding-left: 0;
       margin-bottom: 0;
 
       @include screen('tablet') {
-        display: none;
         position: absolute;
       }
 
@@ -92,10 +91,12 @@ nav {
       }
     }
 
-    &:hover>ul.second-level,
-    &:focus>ul.second-level, 
-    &:focus-within>ul.second-level {
-      display: block;
+    @include screen('tablet') {
+      &:hover>ul.second-level,
+      &:focus>ul.second-level, 
+      &:focus-within>ul.second-level {
+        display: block;
+      }
     }
   }
 }
