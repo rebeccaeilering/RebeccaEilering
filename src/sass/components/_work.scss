@@ -35,7 +35,6 @@
       @include rem(padding, 10px 20px);
       display: inline-block;
       position: relative;
-      z-index: 100;
 
       @include screen('tablet') {
         position: absolute;
