@@ -1,3 +1,7 @@
+//Scroll Reveal plugin
+window.sr = ScrollReveal();
+sr.reveal('.boom');
+
 //Mobile Nav Open/Close
 const mobileNav = document.getElementById('mobile-nav');
 const nav = document.querySelector('nav');
@@ -163,6 +167,3 @@ if(tabs) {
   const tabController = new TabController('#tabs');
 }
 
-//Scroll Reveal plugin
-window.sr = ScrollReveal();
-sr.reveal('.boom');
