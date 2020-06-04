@@ -6,6 +6,43 @@ footer {
   @include font-size(14px);
 
   .container {
-    @include rem(padding, 20px 0);
+    @include rem(padding, 30px 0);
+    @include screen('tablet') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .copy {
+    span{
+      line-height: 27px;
+    }
+  }
+
+  .social {
+    @include screen('tablet') {
+      @include rem(margin-left, 20px);
+    }
+
+    a {
+      color: $white;
+      @include font-size(24px);
+      @include rem(margin-left, 10px);
+
+      &:hover,
+      &:focus {
+        color: $sunflower;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @include screen('tablet') {
+        &:first-child {
+          @include rem(margin-left, 10px);
+        }
+      }
+    }
   }
 }
