@@ -2,6 +2,8 @@
   background: $white;
   max-width: 100%;
   position: relative;
+  z-index: 1;
+  overflow: hidden;
 
   &:before {
     content: '';
@@ -10,6 +12,21 @@
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+
+  &:after {
+    background: lighten($matisse, 10%);
+    opacity: .2;
+    bottom: -100px;
+    content: '';
+    display: block;
+    height: 70%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(2deg);
+    transform-origin: 100%;
+    z-index: -1;
   }
 
 
