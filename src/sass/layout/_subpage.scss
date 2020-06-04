@@ -44,11 +44,7 @@
   }
 
   .skills {
-    display: flex;
-    flex-wrap: wrap;
-
     .skill-category {
-      flex-grow: 1;
 
       &.last {
         width: 100%;
