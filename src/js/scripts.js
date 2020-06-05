@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       item.classList.add('active');
     };
   });
-
-
+  
   //Mobile Nav Open/Close
   const mobileNav = document.getElementById('mobile-nav');
   const nav = document.querySelector('nav');
