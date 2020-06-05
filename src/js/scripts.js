@@ -57,10 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Responsive Tables
-  const tables = document.querySelector('table');
   const headertext = [],
   headers = document.querySelectorAll("table th"),
-  tablerows = document.querySelectorAll("table th"),
   tablebody = document.querySelector("table tbody");
 
   for(let i = 0; i < headers.length; i++) {
