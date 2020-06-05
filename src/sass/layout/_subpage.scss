@@ -29,16 +29,11 @@
     .self {
       width: 100%;
       box-shadow: 5px 5px $matisse;
-      margin-bottom: 20px;
 
       @include screen('tablet') {
         float: left;
         max-width: 300px;
         @include rem(margin-right, 20px);
-      }
-
-      @include screen('tablet-wide') {
-        margin-bottom: 0;
       }
     }
   }

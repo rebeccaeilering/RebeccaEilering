@@ -55,7 +55,6 @@ nav {
     a {
       color: $white;
       display: block;
-      // display: inline-block;
       @include font-size(25px);
 
       @include screen('tablet') {
