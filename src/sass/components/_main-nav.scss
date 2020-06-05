@@ -65,6 +65,10 @@ nav {
         border-bottom: 4px solid transparent;
       }
 
+      &.active {
+        color: $sunflower;
+      }
+
       &:hover,
       &:focus {
         color: $white;
