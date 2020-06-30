@@ -1,0 +1,17 @@
+.facts {
+  background: $sunflower;
+  ul {
+    list-style: none;
+    li {
+      margin-left: 0;
+      padding: 15px;
+      &:nth-child(odd) {
+        background: lighten( $sunflower, 10% );
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
