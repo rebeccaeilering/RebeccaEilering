@@ -1,0 +1,36 @@
+.books {
+  background-color: $pistachio;
+  color: $white;
+  @include rem(padding, 25px);
+  @include rem(margin-top, 50px);
+
+  @include screen('tablet') { 
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: '';
+
+    }
+
+    img {
+      position: absolute;
+      top: -40px;
+      left: 0px;
+      // transform: translateY(-50%);
+      width: 190px;
+    }
+  }
+}
