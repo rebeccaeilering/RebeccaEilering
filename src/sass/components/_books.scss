@@ -1,7 +1,6 @@
 .books {
   background-color: $pistachio;
-  color: $white;
-  @include rem(padding, 25px);
+  @include rem(padding, 30px 25px 25px);
   @include rem(margin-top, 50px);
 
   @include screen('tablet') { 
@@ -11,7 +10,7 @@
   }
 
   h2 {
-    color: $white;
+    color: $black;
   }
 
   .image {
@@ -26,10 +25,6 @@
     }
 
     img {
-      position: absolute;
-      top: -40px;
-      left: 0px;
-      // transform: translateY(-50%);
       width: 190px;
     }
   }
