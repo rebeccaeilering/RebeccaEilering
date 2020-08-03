@@ -2,10 +2,10 @@
 window.sr = ScrollReveal();
 sr.reveal('.boom');
 
+//Mobile Nav Open/Close
 const mobileNav = document.getElementById('mobile-nav');
-console.log(mobileNav);
 const nav = document.querySelector('nav');
-const mobileClose = document.getElementById('mobile-close');
+const mobileClose = document.getElementById('mobile-close')
 
 mobileNav.addEventListener('click', function() {
   nav.classList.add('open');
@@ -39,22 +39,21 @@ navBtns.forEach(button => {
       button.innerHTML = `<i class="fas fa-plus-circle"></i>`;
     }
   });
-
 });
 
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Add active class to nav item
+  //Add active class to nav item
 
-const current = location.pathname.split('/')[1];
-if (current === '') return;
-const menuItems = document.querySelectorAll('nav .a1');
-menuItems.forEach(item => {
-  if (item.getAttribute('href').indexOf(current) !== -1) {
-    item.classList.add('active');
-  };
-});
+  const current = location.pathname.split('/')[1];
+  if (current === '') return;
+  const menuItems = document.querySelectorAll('nav .a1');
+  menuItems.forEach(item => {
+    if (item.getAttribute('href').indexOf(current) !== -1) {
+      item.classList.add('active');
+    };
+  });
 
   // Responsive Tables
   const headertext = [],
