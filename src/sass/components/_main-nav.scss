@@ -61,8 +61,26 @@ nav {
         display: inline-block;
         @include font-size(18px);
         @include rem(padding, 9px 16px);
+        // border-bottom: 4px solid transparent;
+        vertical-align: middle;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        overflow: hidden;
 
-        border-bottom: 4px solid transparent;
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          background: $sunflower;
+          height: 4px;
+          transition-property: right;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
       }
 
       &.active {
@@ -74,8 +92,12 @@ nav {
         color: $white;
 
         @include screen('tablet') {
-          border-bottom: 4px solid $sunflower;
+          // border-bottom: 4px solid $sunflower;
           background: rgba(234, 197, 31, 0.25);
+
+          &:before {
+            right: 0;
+          }
         }
       }
     }
@@ -119,6 +141,10 @@ nav {
             &:focus {
               background-color: $pistachio;
               color: $black;
+
+              &:before {
+                display: none;
+              }
             }
           }
         }

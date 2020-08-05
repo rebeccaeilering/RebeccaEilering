@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-gap: 20px;
+    align-items: center;
   }
 
   h2 {
@@ -14,18 +15,17 @@
   }
 
   .image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
+    @include screen('tablet') { 
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    &:after {
-      content: '';
-
-    }
-
-    img {
-      width: 190px;
+      img {
+        width: 190px;
+        margin-bottom: 0;
+      }
     }
   }
 }
