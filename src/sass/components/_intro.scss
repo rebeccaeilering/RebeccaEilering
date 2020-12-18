@@ -5,7 +5,6 @@
   background-position: center;
   background-color: $matisse;
   background-blend-mode: multiply;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +26,8 @@
 
   @include screen('desktop') { 
     height: 70vh;
+    background-attachment: fixed;
+
   }
 
   &.art {
