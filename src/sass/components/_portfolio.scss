@@ -58,12 +58,12 @@
 
       h4 {
         @include rem(margin-bottom, 5px);
+      }
 
-        span {
-          display: block;
-          font-weight: normal;
-          @include font-size(14px);
-        }
+      span {
+        display: block;
+        font-weight: normal;
+        @include font-size(14px);
       }
     }
   }
